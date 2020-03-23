@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:700&display=swap" rel="stylesheet">
+  <title>Nom Du Server</title>
+</head>
+
+<body>
+  <audio id="loading" autoplay loop>
+    <source src="music/loading.ogg" type="audio/ogg"></audio>
+  <div class="bg-wrapper">
+    <div class="bg-img active"></div>
+    <div class="bg-img"></div>
+    <div class="bg-img"></div>
+  </div>
+  <div class="box-wrapper">
+    <div class="box-gauche">
+      <div class="box-gauche-infos">
+        <img class="img-header" src="img/logo.png" height="200" width="200"></img>
+        <h1 class="name">NOM DU SERVEUR</h1>
+        <div class="separator1"></div>
+        <h3 class="name">Joueurs max:&nbsp;<span class="color-name">128</span></h3>
+        <div class="separator1"></div>
+        <h3 class="name">Gamemode:&nbsp;<span class="color-name">Roleplay</span></h3>
+        <div class="separator1"></div>
+        <h3 class="name">Discord:&nbsp;<span class="color-name">J5HFpkF</span></h3>
+        <div class="separator1"></div>
+        <h3 class="name">Site Web:&nbsp;<span class="color-name">Power-x.eu</span></h3>
+        <div class="separator1"></div>
+        <span class="rgb-left"></span>
+      </div>
+    </div>
+
+    <div class="box-droite">
+      <div class="box-droite-infos">
+        <h3 class="description">DESCRIPTION</h3>
+        <div class="separator1"></div>
+        <h3 class="description-text">This is a description of what you want to put for your server.
+          Welcome on the server we hope you will enjoy this moments with us.
+          <br><br>
+          Ceci est la description de ce que vous souhaitez mettre sur votre serveur.</h3>
+        <div class="separator2"></div>
+        <div class="partenaire-container">
+          <img class="img-partenaire" src="img/logo.png" width="80" height="80">
+          <img class="img-partenaire" src="img/logo.png" width="80" height="80">
+          <img class="img-partenaire" src="img/logo.png" width="80" height="80">
+          <img class="img-partenaire" src="img/logo.png" width="80" height="80">
+          <img class="img-partenaire" src="img/logo.png" width="80" height="80">
+          <img class="img-partenaire" src="img/logo.png" width="80" height="80">
+        </div>
+      </div>
+      <span class="rgb-right"></span>
+    </div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="./script.js"></script>
+
+  <script>
+    var play = false;
+    var myAudio = document.getElementById("loading");
+
+    myAudio.volume = 0.1;
+
+
+    function onKeyDown(event) {
+      switch (event.keyCode) {
+        case 32: //SpaceBar                    
+          if (play) {
+            myAudio.pause();
+            play = false;
+          } else {
+            myAudio.play();
+            play = true;
+          }
+          break;
+      }
+      return false;
+    }
+    window.addEventListener("keydown", onKeyDown, false);
+  </script>
+</body>
+
+</html>
